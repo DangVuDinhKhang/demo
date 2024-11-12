@@ -1,0 +1,53 @@
+.custom-file-input {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.fa-camera {
+    margin-right: 5px;
+}
+
+#input-file {
+    display: none;
+}
+
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Search bar styling */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 600px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 8px 16px;
+    background-color: white;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  }
+
+  /* Input styling */
+  .search-bar input[type="text"] {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Icons styling */
+  .icon {
+    color: #5f6368;
+    font-size: 20px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
