@@ -17,11 +17,31 @@ export class AppComponent {
 
   result?: string;
 
+  imageUrl?: string | null = null;
+
   musicService = inject(MusicService);
 
   onSearch(event: any) {
     this.musicService.search(event.target.files[0]).subscribe(data => {
       this.result = data?.prediction;
     })
+  }
+
+  onImageUpload(event: Event) {
+    const target = event.target as HTMLInputElement;
+    const files: FileList | null = target.files;
+    if (files && files.length > 0) {
+      const reader = new FileReader();
+      const file = files[0];
+
+      reader.onload = (event: any) => {
+        this.imageUrl = event.target.result;
+      };
+
+      reader.readAsDataURL(file);
+    }
+    else {
+      console.log("Error when read image");
+    }
   }
 }
